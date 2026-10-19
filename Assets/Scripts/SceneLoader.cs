@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // needed for SceneManager
- 
+
 // Loads scenes by name. Buttons call LoadScene() and QuitGame()
 // from their On Click list.
 public class SceneLoader : MonoBehaviour
@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
- 
+
     public void QuitGame()
     {
         Debug.Log("Quit Game");
@@ -19,3 +19,4 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 }
+

@@ -7,8 +7,7 @@ public class ScorePickup : MonoBehaviour
 {
     // How many points this coin is worth (change it in the Inspector)
     [SerializeField] private int points = 10;
-    [SerializeField] private AudioClip pickupSound;
-    [SerializeField] private GameObject pickupEffect;
+
 
     // Called automatically when something enters this trigger
     private void OnTriggerEnter(Collider other)
@@ -19,8 +18,6 @@ public class ScorePickup : MonoBehaviour
             // Add our points through the ScoreManager singleton
             ScoreManager.Instance.AddScore(points);
 
-            AudioSource.PlayClipAtPoint(pickupSound, transform.position);
-            Instantiate(pickupEffect, transform.position, Quaternion.identity);
 
             // Remove the coin from the scene: it's collected once and gone
             Destroy(gameObject);
